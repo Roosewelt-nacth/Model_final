@@ -6,13 +6,13 @@
 trigger:
 - main
 
-pool: Login
+pool: Model
 
 steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'compile'
+    goals: 'test'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
